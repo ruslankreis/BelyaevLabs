@@ -84,13 +84,13 @@ void Heap::free_mem(void* &pMem) {
 				itr->descriptor[i].used = false;
 				pMem = 0;
 				itr->total_size -= itr->descriptor[i].size;
-				if(itr->total_size == 0) {
-					delete itr;
-					itr = nullptr;
-					if(maybeDel != nullptr)
-						maybeDel->prev = 0;
-					else current = nullptr;
-				}
+				//if(itr->total_size == 0) {
+				//	delete itr;
+				//	itr = nullptr;
+				//	if(maybeDel != nullptr)
+				//		maybeDel->prev = 0;
+				//	else current = nullptr;
+				//}
 				return;
 			}
 		maybeDel = itr;
